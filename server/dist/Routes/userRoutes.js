@@ -1,0 +1,21 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const userController_1 = require("../Controller/userController");
+const auth_1 = require("../middleware/auth");
+const multer_1 = require("../utils/multer");
+const router = express_1.default.Router();
+router.post("/signup", userController_1.Register);
+router.patch("/update-profile/:id", auth_1.auth, multer_1.upload.single('image'), userController_1.UpdateUserProfile);
+router.post("/verify-user/:signature", userController_1.verifyUser);
+router.post("/login", userController_1.Login);
+router.get('/resend-otp/:signature', userController_1.resendOTP);
+router.get('/get-all-users', userController_1.getAllUsers);
+router.post("/forgotpassword", userController_1.forgotPassword);
+router.get("/resetpassword/:token", userController_1.resetPasswordGet);
+router.post("/resetpassword/:id", userController_1.resetPasswordPost);
+router.get('/:id/like', userController_1.likePost);
+exports.default = router;

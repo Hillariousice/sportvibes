@@ -1,0 +1,57 @@
+.h{
+    background-color: gray;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+     place-content: center;
+}
+
+.gig{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ti{
+    font-weight: bolder;
+    font-size: x-large;
+    padding-bottom: 30px;
+}
+.yi{
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+.firs{
+   height: 2rem;
+   width: 18rem; 
+   border: 1px solid grey;
+   border-radius: 3px;
+   margin-top: 4px;
+}
+.resetBtn{
+    background-color: rgb(20, 155, 108);
+    border-radius: 4px;
+    text-decoration: none;
+    width: 12rem;
+    height: 2rem;
+    margin-top: 2rem;
+    text-decoration-line: none;
+}
+
+.ilink{
+    text-decoration: none; 
+    color: black;
+    font-weight: 700;
+}
+.backLog{
+    margin-top: 20px;
+    font-size: 12px;
+    color: black !important;
+}

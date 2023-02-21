@@ -1,0 +1,20 @@
+.allpage{
+  display: flex
+}
+.backgroundside{
+    height: 100vh;
+    width: 50vw;
+}
+.image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.sideform{
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}

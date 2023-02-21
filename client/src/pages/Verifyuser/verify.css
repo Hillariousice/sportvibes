@@ -1,0 +1,37 @@
+.inputbox{
+    color: black;
+}
+.cardfull{
+  
+    display: flex;
+    flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 500px;
+     background-color: gray;
+     height: 100vh;
+}
+.otphead{
+    margin-left: 22px;
+}
+.tt{
+    font-weight: bolder;
+    font-size: medium;
+    margin-top: 30px;
+}
+.bnn{
+    margin-left: 3.2rem;
+    width: 12rem;
+    height: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    background-color:  rgb(20, 155, 108);
+    border: none;
+    color: white;
+    font-weight: 800;
+}
+.azeez{
+    background-color: white;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+}
