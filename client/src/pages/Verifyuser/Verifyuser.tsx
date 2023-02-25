@@ -2,8 +2,19 @@ import rOtpVerify from "./Verifyuser.module.css";
 import Card from "../../components/Card/Card";
 import OTPInputField from 'react-otp-input';
 import "./verify.css"
+import { useState } from "react";
 
 const Verifyuser = () => {
+  const [otpValue, setOtpValue] = useState('');
+  
+  const handleChange = (value:any) => {
+    setOtpValue(value);
+  };
+  
+  const handleSubmit = (event:any) => {
+    event.preventDefault();
+    // add verification logic here
+  };
 
   return (
     <div>
@@ -11,15 +22,15 @@ const Verifyuser = () => {
       <div className="azeez">
       <h3 className="otphead">OTP Verification</h3>
             <p className="">Fill in your OTP Verification code</p>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div>
                     
                     <p className="tt">OTP</p>
                     <div className="OTP-field">
 
                     <OTPInputField
-                    //  value={}
-                    //  onChange={}
+                     value={otpValue}
+                     onChange={handleChange}
                      numInputs={4}
                      inputStyle={
                         {

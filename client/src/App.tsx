@@ -26,10 +26,10 @@ const App = () => {
 					<Route path="/" element={<Register />} />
 					<Route path="/admin-signup" element={<AdminsSignup />} />
 					<Route path="/sentmail" element={<MailSent />} />
-					<Route path="/forgotpasswordd" element={<ForgetPasswordCard />} />
-					<Route path="/verify-user" element={<Verifyuser/>} />
+					<Route path="/forgotpassword" element={<ForgetPasswordCard />} />
+					<Route path="/verifyuser" element={<Verifyuser/>} />
 					<Route
-						path="/users/resetpasswordd/:token"
+						path="/users/resetpassword/:token"
 						element={<ResetPasswordd />}
 					/>
 					<Route path="/profilesetting" element={<ProfileSetting />} />

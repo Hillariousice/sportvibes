@@ -8,94 +8,9 @@ import { JwtPayload } from 'jsonwebtoken';
 
 
 
-/*=======Admin Register=========*/
 
-export const  AdminRegister = async(req:JwtPayload,res:Response)=>{
-    try{
-        const id = req.admin.id
-        const {email, phone, password, userName, address,image} = req.body;
-        const uuidadmin = uuidv4()
-    
-        const validateResult = adminSchema.validate(req.body,option)
-        if(validateResult.error){
-          return res.status(400).json({
-            Error:validateResult.error.details[0].message
-          })
-        }
-    console.log(validateResult)
-        //Generate Salt
-        const salt = await GenerateSalt()
-        const adminPassword = await GeneratePassword(password,salt)
-     
-    
-      //Generate OTP
-      const {otp,expiry} = GenerateOTP()
-    
-      //check if admin exist
-      const Admin = await AdminInstance.findOne({where:{id:id}}) as unknown as AdminAttribute
-      
-        if(Admin.email === email){
-            return res.status(400).json({
-                message:'Email already exists'
-              }) 
-        }
 
-        if(Admin.phone === phone){
-            return res.status(400).json({
-                message:'Phone number already exists'
-              }) 
-        }
 
-      //Create Admin
-      if(Admin.role === "superadmin"){
-       await AdminInstance.create({
-          id:uuidadmin,
-          email,
-          password:adminPassword,
-          userName,
-          salt,
-          address,
-          postId:"",
-          phone,
-          otp,
-          otp_expiry:expiry,
-          image:"",
-          verified:true,
-          role:"admin"
-        })
-       
-        
-        //check if admin exists(where you give the admin identity)
-        const Admin = await AdminInstance.findOne({where:{id:id}}) as unknown as AdminAttribute
-          
-        //Generate Signature for user
-       let signature= await GenerateSignature({
-          id:Admin.id,
-          email:Admin.email,
-          verified:Admin.verified
-    
-        })
-    
-         return res.status(201).json({
-          message:'Admin created successfully', 
-          signature,
-          verified:Admin.verified,
-    
-    
-        })
-      }
-      return res.status(400).json({
-        message:'Admin already exists'
-      }) 
-        
-     }catch(err){
-      console.log(err)
-      res.status(500).json({
-        Error:"Internal server Error",
-        route:"/admins/create-admin"
-      })
-     }
-}
 
 /** =============== Super Admin =============== **/
 export const  superAdmin = async(req:Request,res:Response)=>{

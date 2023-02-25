@@ -81,10 +81,7 @@ const AdminSignup = () => {
 						<div className={styled.adminSignUpLogo}>
 							<div className={styled.logo_image}>
 								<span>
-									<img
-										src={BikeLogo}
-										alt="placeholder_image_admins_signup_form"
-									/>
+									
 								</span>
 							</div>
 							<div className={styled.desc}>Sportvibes Admin</div>

@@ -59,14 +59,14 @@ function ProfileSetting() {
 								<p className={style.text}>
 									Only you can view and edit your information
 								</p>
-								<label className={style.user_profile_label}>Name</label>
+								<label className={style.user_profile_label}>UserName</label>
 								<div className={style.userProfile_input}>
 									<input
 										required
 										className={style.userProfile}
 										type="text"
-										placeholder="matthew"
-										name="name"
+										placeholder="username"
+										name="userName"
 										onChange={handleChange}
 									/>
 									<div className={style.icon1}>
@@ -97,9 +97,59 @@ function ProfileSetting() {
 										name="email"
 										onChange={handleChange}
 									/>
+								
 									<div className={style.icon1}>
 										<FaPencilAlt />
 									</div>
+									
+								</div>
+								<label className={style.user_profile_label}>Image</label>
+								<div className={style.userProfile_input}>
+									<input
+										required
+										className={style.userProfile}
+										type="file"
+										placeholder="image"
+										name="image"
+										onChange={handleChange}
+									/>
+								
+									<div className={style.icon1}>
+										<FaPencilAlt />
+									</div>
+									
+								</div>
+								<label className={style.user_profile_label}>interest</label>
+								<div className={style.userProfile_input}>
+									<input
+										required
+										className={style.userProfile}
+										type="text"
+										placeholder="interest"
+										name="interest"
+										onChange={handleChange}
+									/>
+								
+									<div className={style.icon1}>
+										<FaPencilAlt />
+									</div>
+									
+								</div>
+								<label className={style.user_profile_label}>Address</label>
+								<div className={style.userProfile_input}>
+									<input
+										required
+										className={style.userProfile}
+										type="text"
+										placeholder="address"
+										name="address"
+										onChange={handleChange}
+									/>
+								
+									<div className={style.icon1}>
+										<FaPencilAlt />
+									</div>
+									
 								</div>
 								<div className={style.btn_contain}>
 									{/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}

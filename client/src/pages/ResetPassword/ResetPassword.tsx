@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 
 const baseUrl = "http://localhost:4000";
-const ForgotPasswordd = () => {
+const ForgotPassword = () => {
 	const [formData, setFormData] = useState({});
 
 	const handleChange = (e: any) => {
@@ -86,4 +86,4 @@ const ForgotPasswordd = () => {
 	);
 };
 
-export default ForgotPasswordd;
+export default ForgotPassword;

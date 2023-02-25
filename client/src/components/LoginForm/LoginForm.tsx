@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import image from "../../assets/Users_dashboard/image.png";
+import image from "../../assets/sport.jpeg";
 import logodesign from "../../assets/logodesign.svg";
 import loginFormStyle from "./LoginForm.module.css";
 import { apiPost } from "../../utils/api/axios";
@@ -66,10 +66,8 @@ const LoginForm = () => {
 					<div className={loginFormStyle.login_logo_div}>
 						<Link to="/" style={{ textDecoration: "none" }}>
 							<div className={loginFormStyle.login_form_logo}>
-								<img src={logodesign} alt="logo" />
-								<span>
-									Sportvibes
-								</span>
+							
+								
 							</div>
 						</Link>
 					</div>
