@@ -1,7 +1,7 @@
 import React from 'react'
 import DemoNav from '../../components/Navbar/DemoNavbar'
 
-const UserDashbord = () => {
+const UserDashboard = () => {
   return (
     <div>
       <DemoNav/>
@@ -9,4 +9,4 @@ const UserDashbord = () => {
   )
 }
 
-export default UserDashbord
+export default UserDashboard

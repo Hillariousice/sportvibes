@@ -29,7 +29,7 @@ const App = () => {
 					<Route path="/forgotpassword" element={<ForgetPasswordCard />} />
 					<Route path="/verifyuser" element={<Verifyuser/>} />
 					<Route
-						path="/users/resetpassword/:token"
+						path="/users/resetpassword"
 						element={<ResetPasswordd />}
 					/>
 					<Route path="/profilesetting" element={<ProfileSetting />} />

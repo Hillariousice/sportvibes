@@ -46,7 +46,7 @@ import { PostAttribute, PostInstance } from '../Model';
           otp_expiry: expiry,
           interest,
           verified: false,
-          image:"",
+          image:'',
           role:'user'
         })
         

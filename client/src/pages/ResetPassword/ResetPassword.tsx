@@ -44,13 +44,7 @@ const ForgotPassword = () => {
 
 			<div className={rest.form_style}>
 				<form className={rest.form_div}>
-					<div className={rest.budylogo}>
-						<img src={Group15} alt="admin" />
-						<p className={rest.swift}>
-							Sportvibes
-						</p>
-					</div>
-
+				
 					<h3 className={rest.signup_head}> Reset Password</h3>
 					<div className={rest.input_form}>
 						<div>
